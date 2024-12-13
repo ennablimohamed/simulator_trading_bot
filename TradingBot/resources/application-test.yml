@@ -1,0 +1,45 @@
+trading:
+  symbol: BTCUSDT
+  order-book:
+    limit: 5000
+  traders:
+    - BollingerTrader:
+        type: BollingerReverseMeanTrader
+        symbol: BTCUSDT
+        target-volume: 10
+        respected-gap-value: 10
+    - BollingerOriginalMeanReverseTrader:
+        type: BollingerOriginalReverseMeanTrader
+        symbol: BTCUSDT
+        target-volume: 10
+        respected-gap-value: 10
+    - SecuredCapitalTrader:
+        type: RealSecuredCapitalTrader
+        symbol: BTCUSDT
+        target-volume: 10
+        respected-gap-value: 10
+    - MinMaxSecuredCapitalTrader:
+        type: MinMaxSecuredCapitalTrader
+        symbol: BTCUSDT
+        target-volume: 10
+        respected-gap-value: 10
+    - MinMaxTrader:
+        type: MinMaxTrader
+        symbol: BTCUSDT
+        target-volume: 10
+        respected-gap-value: 1000
+
+  capital: 200
+  trade-capital-percentage: 0.01
+
+api:
+  credentials:
+    api-key: 07yFPJlYHoqXWlpvGcoTwOMLrrLUIyWKHyLz4C9pBJ348RVbQy5Xf0ZEhOXJDwIi
+    secret: TZMK5IgyGlxliTsMnt1wds3eNBC8FtugGWfj6BylF1QAdVC9Ltz7I3pWMlTAO1AR
+  trades:
+    base-url: https://testnet.binance.vision
+    websocket-base-url: wss://stream.testnet.binance.vision:9443
+  base-url: https://api.binance.com
+  websocket-base-url: wss://stream.binance.com:9443
+
+
